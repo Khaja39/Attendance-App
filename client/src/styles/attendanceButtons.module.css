@@ -1,0 +1,52 @@
+/* attendanceButtons.module.css */
+
+.attendanceContainer {
+    max-width: 900px;
+    margin: 10px auto 40px auto;
+    padding: 20px;
+}
+
+/* --- KEY STYLES FOR TOP-RIGHT POSITIONING --- */
+.dashboardHeader {
+    width: 100%; /* Ensure the header spans the full width of the container */
+    display: flex;
+    /* Pushes content (UserInfo) to the far right */
+    justify-content: flex-end; 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* If UserInfo is just text, it will align right. 
+   If UserInfo has its own div with full width, you might need to style UserInfo's 
+   root element inside the UserInfo.jsx component as well. 
+   For now, this dashboardHeader style is the main fix. */
+
+
+/* --- Other Component Styles (for cleanup) --- */
+.statusMessage {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+/*
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+*/
+.punchButton {
+    margin: 10px;
+    /*padding: 12px 25px;*/
+    font-size: 1.1em;
+    border: none;
+    /*border-radius: 6px;*/
+    cursor: pointer;
+    min-width: 150px;
+    background-color: #4A90E2; /* Example Blue */
+    color: white;
+    
+    
+}

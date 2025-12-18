@@ -1,0 +1,74 @@
+/* auth.module.css */
+
+/* --- Container Styles (ensures content is centered) --- */
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form horizontally */
+    justify-content: center;
+    min-height: 100vh; 
+    background-color: #f4f7f6;
+}
+
+.authHeader {
+    margin-bottom: 25px; /* Space below the "Create Account" text */
+    color: #333;
+    font-size: 24px;
+}
+
+/* --- Form Styles: Controls Vertical Stacking and Gap --- */
+.authForm {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px; 
+    
+    /* Key for vertical stacking and spacing */
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; /* Consistent space between all inputs and the Register button */
+}
+
+/* --- Input and Button Styles (for visual design) --- */
+.authInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    /* Ensure inputs take up full width of the form */
+    width: 100%; 
+}
+
+.authButton {
+    background-color: #4A90E2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%; /* Register button spans full width */
+}
+
+/* --- Footer/Switch Link Styles (Space between button and link) --- */
+.authFooter {
+    margin-top: 20px; /* **THIS ADDS SPACE BELOW THE REGISTER BUTTON** */
+    color: #666;
+    text-align: center;
+}
+
+.switchButton {
+    background: none;
+    border: none;
+    color: #4A90E2;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font-size: inherit;
+    margin-left: 5px; /* Small space between 'account?' and 'Login' */
+}
+
+/* ... (Add other styles like .errorMessage, .successMessage) ... */

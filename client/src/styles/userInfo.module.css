@@ -1,0 +1,13 @@
+.dashboardHeader {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+   /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);*/
+    
+    /* FLEXBOX CODE FOR LAYOUT: */
+    display: flex;
+    justify-content: space-between; /* PUSHES CONTENT TO LEFT AND RIGHT SIDES */
+    align-items: center;            /* Centers items vertically */
+    
+    /*margin-bottom: var(--spacing-lg);*/
+}

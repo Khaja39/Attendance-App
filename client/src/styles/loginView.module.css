@@ -1,0 +1,66 @@
+/* loginView.module.css */
+
+/* Main Container */
+.snView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snView h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* --- THE GAP LOGIC --- */
+
+/* 1. Form Container (Gaps between inputs) */
+.formContainer {
+    display: flex;
+    flex-direction: column; /* Stack them vertically */
+    gap: 15px;              /* <--- Adds 15px space between inputs & login button */
+    width: 100%;
+}
+
+.inputField {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submitButton {
+    padding: 12px;
+    background-color: #2563eb; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Extra space before the button if needed */
+}
+
+/* 2. "New Here" Text (Gap between text and button) */
+.registerText {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* <--- Adds 8px space between "New here?" and "Register" */
+    font-size: 0.95rem;
+}
+
+.linkButton {
+    background: none;
+    border: none;
+    color: #2563eb;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0;
+}

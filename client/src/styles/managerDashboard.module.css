@@ -1,0 +1,88 @@
+/* --- 1. Container Styling (ManagerDashboard.module.css) --- */
+
+/* This container holds the Title and the User Info */
+.dashboardHeader {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* FLEXBOX CODE FOR LAYOUT: */
+    display: flex;
+    justify-content: space-between; /* PUSHES CONTENT TO LEFT AND RIGHT SIDES */
+    align-items: center;            /* Centers items vertically */
+    
+    margin-bottom: var(--spacing-lg);
+}
+
+/* --- 2. User Info Block Styling --- */
+
+.userInfo {
+    /* Ensures all text lines inside this block are right-aligned */
+    text-align: right; 
+}
+
+.userInfo p {
+    margin: 4px 0; /* Keeps the lines tight */
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+}
+
+/* --- Gap between Search Input and Table --- */
+.searchInput {
+    /* Existing search input styles... */
+    width: 300px; /* Example width */
+    padding: 8px;
+    margin-bottom: 20px; /* **THIS ADDS THE GAP** */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* --- Table Styling for Manager Dashboard --- */
+.attendanceTable {
+    width: 100%; /* Make the table take full width */
+    border-collapse: collapse; /* Removes double borders for a cleaner look */
+    margin-top: 5px; /* A small margin for visual separation if needed */
+}
+/* --- Header Styling (Different Color) --- */
+.attendanceTable thead {
+    background-color: #4A90E2; /* A strong blue color for the header */
+    color: white; /* White text for contrast */
+}
+
+/* --- Cell and Column Separators, and Padding --- */
+.attendanceTable th,
+.attendanceTable td {
+    padding: 12px 15px; /* Padding inside cells */
+    text-align: left; /* Align text within columns */
+    border-bottom: 1px solid #ddd; /* Horizontal lines separating rows */
+    /* Add vertical lines for column separation */
+    border-left: 1px solid #eee; 
+    border-right: 1px solid #eee;
+}
+
+/* Remove border on first and last column for clean edge look */
+.attendanceTable th:first-child,
+.attendanceTable td:first-child {
+    border-left: none;
+}
+.attendanceTable th:last-child,
+.attendanceTable td:last-child {
+    border-right: none;
+}
+
+/* --- Evenly Distributed Columns (Equal Width) --- */
+.attendanceTable th {
+    /* **THIS ENSURES EQUAL SPACE DISTRIBUTION** */
+    /* Assumes you have 6 columns based on your component logic */
+    width: calc(100% / 6); 
+    /* You must ensure the number in the denominator matches the actual number of columns (6 in this case) */
+}
+
+/* Optional: Stripe the rows for better readability */
+.attendanceTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.attendanceTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
