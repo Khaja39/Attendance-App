@@ -10,9 +10,19 @@ const app = express();
 dotenv.config();
 
 // Middleware
+// 1. PLACE THIS AT THE VERY TOP (Before any routes)
 app.use(cors({
-  origin: ["http://localhost:5173", "https://attendance-app-seven-mu.vercel.app"] 
+  origin: [
+    "http://localhost:5173", 
+    "https://attendance-app-seven-mu.vercel.app" 
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// 2. Handle the "Preflight" OPTIONS request manually (Optional but helps)
+app.options('*', cors());
 
 app.use(express.json());
 
