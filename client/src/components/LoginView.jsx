@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import api from '../api';
-import styles from "../styles/logInView.module.css";
+import styles from "../styles/loginView.module.css";
 
 const LoginView = ({ onLoginSuccess, switchToRegister }) => {
     const [email, setEmail] = useState('');

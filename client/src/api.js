@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create an instance with the base URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000/', // Your API domain
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/', // Your API domain
   timeout: 5000, // Optional: Time out after 5 seconds
 });
 
