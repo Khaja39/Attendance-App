@@ -1,5 +1,5 @@
     import React, { useState, useEffect } from 'react';
-    import styles from '../styles/userinfo.module.css';
+    import styles from '../styles/userInfo.module.css';
     import LogoutButton from './LogoutButton';
 
 
