@@ -79,6 +79,12 @@ const LoginView = ({ onLoginSuccess, switchToRegister }) => {
                 <li>manager2@test.com</li>
                 <li>manager3@test.com</li>
             </ol>
+            <h4>Manager Names for Registering</h4>
+            <ol>
+                <li>Manager One</li>
+                <li>Manager Two</li>
+                <li>Manager Three</li>
+            </ol>
         </div>
         </div>
     );
