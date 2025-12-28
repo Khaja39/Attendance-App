@@ -3,6 +3,8 @@ import { query } from '../config/db.js';
 
 export const registerUser = async (req, res) => {
     const { name, email, password,Manager, employee_Type } = req.body;
+    // We will store the final Manager ID here (starts as null)
+    let finalManagerId = null;
     try {
 
 
@@ -11,7 +13,7 @@ export const registerUser = async (req, res) => {
             // Check if this name exists in the DB and is actually a Manager
             const managerCheck = await query(
                 `SELECT user_id FROM users 
-                 WHERE user_id = $1 
+                 WHERE user_name = $1 
                  AND employee_type = 'Manager'`, 
                 [Manager]
             );
@@ -21,6 +23,8 @@ export const registerUser = async (req, res) => {
                 return res.status(404).json({ 
                     message: `Invalid Manager Name. '${Manager}' does not exist or is not a Manager.` 
                 });
+            // FIX: Extract the actual ID from the database result
+            finalManagerId = managerCheck.rows[0].user_id;
             }
             
             // If we get here, the manager is valid!

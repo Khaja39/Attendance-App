@@ -26,7 +26,7 @@ const LogoutButton = ({ onLogout }) => {
             } else {
                     console.warn("onLogout prop missing! Redirecting manually.");
                 // Fallback: If the prop is missing, just force a reload or navigate
-                navigate('/login');
+                navigate('/');
                 window.location.reload();
             }
         }
